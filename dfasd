@@ -1,0 +1,305 @@
+[33m75781fc[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m fix: height + add separate height prop
+[33m292f804[m fix: remove overflow + padding when dropdown closed / unmount
+[33md071d2a[m fix unhandle setState
+[33m74d5aef[m fix protective route redirecting
+[33m4417595[m add scroll event only when appbar has position fixed
+[33m19bf54e[m Chartjs make responsive
+[33md9dd125[m add useWindowResize hook and make rechartjs piechart responsive
+[33m8980c9a[m fix apex column chart responsiveness
+[33m8e042e0[m add horizontal nav menu 😐😐
+[33m1652811[m fix appbar position  types 🐣🐥
+[33m6abecf7[m fix request X-JSON-Path 🧐🧐
+[33m242bc24[m vercel config file 🔼⚒️
+[33m8142e65[m dont read this 😞😞 v2
+[33m6658c30[m dont read this 😞😞
+[33m98fe586[m dont read 😞😞
+[33m983aaeb[m removed unused imports 📦🤢🤮🗑️
+[33mce14fff[m add external api endpoint 😮‍💨😮‍💨😮‍💨😵‍💫
+[33m73038ec[m change images src to external(imgbb)
+[33m61a4e24[m add additional packges
+[33m2172b4d[m fixed types
+[33m599d10e[m global styles
+[33m64b6187[m removed unwanted images
+[33m2cc2f57[m additional data
+[33m2036abd[m fixed type & add charts, auth pages
+[33mef6ba64[m fixed types
+[33m880e3c4[m add favicon
+[33mfb3a744[m add cards page
+[33m1ef10c5[m add apex, rechart & chartjs page
+[33mebf3172[m fix some nav list & routes, apex charts page
+[33me6e2201[m auth & sidenav minor change
+[33mbbe01aa[m add user profile & settings, signup/signin page
+[33ma46644d[m image and logos 🥹🥳😀🙃🥳✌🏾
+[33mf20fd5b[m optional title is used as children 👶🏾👼🏾🧒🏾👧🏾
+[33m046ca7b[m current account holder profile page 🦸👨‍💻👩‍💻📃
+[33me4609fd[m fetch & tab index hook 🪃🪝1️⃣🪝
+[33meabf525[m removed un-neccessary list item 🔥🗑️
+[33me5f9cc9[m adjust title font size 🔠🤏
+[33mb829752[m hide horizontal scroll bar 🐭🕳️
+[33m4cbd65d[m now text overflow can reset ⏳🙅🏾🙅🏾‍♀️
+[33me6fc154[m remove un-neccessary indicator calc func 💩🪠🗑️
+[33maa176a5[m rounded progress inner bar 🌏🌏
+[33m67ae028[m add gap for ele space to breath
+[33m94fd733[m add {avatar, name} for future replacement of src & alt
+[33mbef3008[m add user list and his/her details page
+[33m20f1293[m add login history and project list
+[33m4f5e896[m fixed data[all] can be empty array & add country API props
+[33m12a8bee[m add users components
+[33me3d1d21[m addjust typography, size & color
+[33m5f834bc[m addjust typography and content position
+[33mceaebdd[m add content scroller
+[33m95c05a9[m add credit/debit card
+[33m421a95e[m add modal
+[33m46b2be0[m text and spiner as loading indicator
+[33me93f970[m it's actions buttons moved to separate file
+[33m6b461b7[m remove unneccessary box
+[33m7238e86[m container stlyed with flex & defualt text line height
+[33ma176d8d[m fixed border radius
+[33m85ae48e[m add border props
+[33m568218b[m fixed border radius
+[33mfbf20c1[m adjust width & add ref
+[33m50aafd6[m useModal hooks for modal
+[33m09eac7d[m useModal hook for handle modals
+[33mefc59bf[m modal content styled
+[33m33cbf22[m adjust widh, color
+[33m99ed8b3[m remove space between box & label
+[33mdd69169[m adjust width and margin
+[33m2adad01[m default value is stored as component 1st time mount 😎😎🥹
+[33m69227cf[m min/max length, value and pattern, adjust width and label ⚒️⚒️🗳️
+[33m28d22b0[m add tabs 1️⃣2️⃣3️⃣4️⃣
+[33mf746228[m h6 font size adjust from 20 --> 18px 🔠🤏
+[33mcbe07e0[m User page, list json & components 👩‍💻👨‍💻🤓🥳🤩
+[33m9376b15[m user list reducer 😎😎🦸
+[33m1252077[m default font family 🧑‍🤝‍🧑🧬
+[33m2446d5d[m stupid typo fixed 😑😑😑
+[33m2db6bb1[m invoice routes & endpoint 😎😎
+[33mda50ce1[m unbreakable text 💔🦸
+[33m290b793[m fix some stupid typo 🙃🙃😑
+[33m30c6537[m invoice page & components 🎁🗳️📃
+[33mb628f3a[m column default height 👋👋
+[33mfd455e9[m 💩💩'r ever
+[33m87dd526[m renamed styled file 😵‍💫
+[33maaf9fef[m add invoice 😶‍🌫️😶‍🌫️, even made more 💩💩'er ever
+[33m5789f13[m V2.1.1 #myneer 🫡🤏
+[33m3847676[m unchanged 🤮🤮
+[33mf3a5377[m modal element 💃🕺
+[33m33a64ac[m uitility styles
+[33mc064bf9[m V2 component  #miner 🤏🤏
+[33mb3320ec[m V2.1 #miner 🤏🤏
+[33mc5f27ce[m some uitils 🔧⚒️
+[33m4a837ba[m chat  and local api server 😮‍💨😮‍💨🥸
+[33me3e83e9[m chat reducer and local api end point
+[33ma3f285a[m data grid overflow fixed
+[33m33beec4[m click handler type fix
+[33m9b3ac64[m move navlist to its own separate file
+[33mbee7363[m move onclick handler to its parent
+[33m8c81692[m fix reponsive issue
+[33madda2c1[m fix width and reponsiveness issue
+[33m0d62dd8[m fix height issue
+[33mf93d68f[m add app bar
+[33m850f59c[m modal and table styles are added
+[33ma1e27f4[m overflow & some responsiveness is added 🥶🥶🤯🤐🤧🤒🤕
+[33mb510955[m pages route is added 🥹🥹
+[33ma25759b[m making overflow flow 🧤🫠🫠
+[33m4359910[m dropdown v➰😁😁
+[33m4981aea[m fix some clutters 🗑️❤️‍🩹❤️‍🩹
+[33m2610486[m styles and onClick event add just 😶‍🌫️😶‍🌫️🖕
+[33m5dd093c[m fix height 🫡🫡
+[33mb3dd84a[m fix colors and click events 👁️👁️☠️
+[33m1a7477b[m email pages for viewing emails 😮‍💨😮‍💨🥱
+[33m2e223bb[m redux is add with email slice 🥳🥳🤩😎
+[33m9782a07[m fix typo 😁😁
+[33m0173bf2[m add varient props 🤬👉🤠
+[33m2a25302[m add scroll container 📱🫲
+[33m38bb3a9[m add notification dropdown 🔔🫳
+[33m94c7937[m add app bar v1 🥹🥹🥳
+[33m5ad36df[m add dropdown v2 ☠️☠️🤖🫥
+[33mdd321c5[m add text transform prop 🫠🫠🫠😵
+[33m7c0252b[m add with prop 🩲🧤
+[33mfa4ac95[m add click props 🫥🫥🫵👁️
+[33mbd931b5[m fix some typography 😮‍💨😪
+[33m867db28[m replace grid container to inner grid
+[33mbc56eb3[m add nav bar 😃🤓🤓🤠
+[33m56de46f[m add member and client transaction table 🧑‍💼👩‍💼👓🕶️
+[33mce19e77[m add analytics & ecommerce page 🛍️🛒📈📉
+[33m1ecd840[m add generate random color from color pallets 🎨🥳🥹
+[33m27dc709[m add active, hover color
+[33m7dd5228[m remove button css, add overflow syte
+[33m589915f[m add select box 🥳🥳
+[33m54898ee[m messed up
+[33m2915b52[m add data grid 😭😭😑
+[33m3d536e3[m add flex box 🏋️‍♂️🎁
+[33m4444cb4[m fix overflow -> no overflow 🫠 -> 😀
+[33m0277135[m add disable props 🧑‍🦽👨‍🦽
+[33m369a810[m add hex color shade generate 😑😑😑
+[33m71a832f[m add size (small & regular) 🐘🐁🐇
+[33m6b68533[m add hover color 👀😺😸😹😻🎨
+[33m7c1d390[m add font size prop 👀👀
+[33mb79aa7b[m it's sucks yayek 🖕🤬🥵😭
+[33mbddf43c[m add width props 🤸🤸‍♀️
+[33m5f645f8[m add app main pages 😎🥰🥰😇
+[33m27b67f9[m fix layout issue 🧑‍🏫👩‍🏫👨‍💻"
+[33mac16f9c[m add new cards 🃏🎴♦️🪪
+[33m6c16a83[m add color box 🎨🎨📮📭🎁🧃
+[33m16be995[m fix grid layout 😑😑😑
+[33m962841a[m fix margin 👀🖕
+[33m0ab58cb[m add sales card 💳🛍️
+[33m7f6912e[m add session card 👯💃🕺🎯
+[33mcf6abdd[m add subtitle props 🪆🪆
+[33mba970a6[m fix grid issue 😮‍💨😡🥵
+[33m391691a[m add default font size 🐣🧻🧻
+[33m76221d6[m change title name 💻😮‍💨😮‍💨
+[33m4491cdb[m chnage default height 🗼🗼😑
+[33med58e4f[m grid 2.0v 😎😎✌️
+[33m24a875a[m add flex 💪🏋️‍♂️
+[33m22f6c59[m add color, font size options 🎨🖌️🐡
+[33m90c2e3f[m add font size & weight 🐡🐣
+[33mf5a9d41[m add text field (input) ⌨️📃📄
+[33mdadcecb[m fix intensity color option 🔵⚪🟣
+[33m1c46e85[m add input text field 💻⌨️🧻
+[33md838693[m add style props for title and total 👾☠️
+[33mba33af1[m add position props 👉👆👇👈
+[33mf19d0d9[m add income and expense card 🤑💰🏧
+[33m2f9c811[m add overflow syle
+[33m81b17aa[m 😮‍💨🙄😮‍💨😮‍💨😮‍💨
+[33m5f82115[m add dummy meeting card
+[33m8a1daed[m add styles props and wrapping table with container div
+[33m24837e7[m table auto overflow when it needed
+[33ma0b8ea3[m fix padding
+[33m315c61f[m fix size of label
+[33m905f291[m add avatar group
+[33m4a014a9[m fix pass props to styed component
+[33m164bc6d[m fix font size and add skin color props
+[33m883453a[m add dummy components 😵‍💫😵‍💫😑
+[33m88fd9c6[m add timeline and schedule component 🔮🕳️🪅
+[33m940b7a0[m add default export 👒🥳🥸🤩
+[33m1a67eb6[m add some styles 🧢🧣👓
+[33mc2cf976[m add title props 👒😏🦵🦵
+[33m1013c55[m description props is optional 💫🤨
+[33m2411314[m add flex grow props 🥹🥹🦍
+[33ma49f609[m renamed files name 🫠👉😀
+[33mfdbc369[m pass all props 🫠😶🤥
+[33m4cea0c4[m add color props and fix item width 🌈🖌️
+[33m65a0a85[m add flex grow 🐷🐽
+[33md46f3dd[m fix secondary color 😇😇
+[33mf0b9e5b[m add variables 😎😏
+[33m416e003[m add arrow indicator 👆👇
+[33mcd2614c[m add timeline ⏰🕳️🔮🕰️
+[33mb7bc8fc[m fix table border 😵‍💫😵‍💫😮‍💨
+[33m822b70f[m add some props and remove border in table 😵‍💫😵‍💫😮‍💨
+[33m76c94fe[m add table title as optional 🤔🧌
+[33maa79fc6[m add height and width props  🌉🧜‍♀️🧑‍🦽👻
+[33m2f47f5e[m add table 🫤🫤
+[33m16d9e07[m remove default chart and added statistic chart
+[33m863c776[m renamed props type 😑🫡
+[33m270dc79[m add statistic card default series type 👮‍♂️🦯🛸
+[33m68ab463[m add min. height and width 🌗💨💦🐳
+[33m4a8170c[m add vertical props 💉🫣😫😖
+[33m042b161[m add simple table 🩻😵😵‍💫🧠🔥
+[33mff57952[m add opt. from to generate color shades 😶‍🌫️🫥
+[33m3041490[m add statistic main components 🥲😍
+[33m0fafb98[m add statistic chart config component 👾🕳️🩻🧬
+[33m1788bff[m add statistic static cards 🎴☄️⚡🫥
+[33mbdf5a69[m add  none-interactive chart 👾🫥🦿
+[33mc434a29[m add generat colors shade based on aplha(opacity) 🎨🖌️2️⃣9️⃣
+[33mba5a17a[m add styles props for css ⚡☄️
+[33m6483666[m add default export for dot 🟣🔵🟪🟩
+[33m22c4f38[m change hex color to rgba 😞😞🫥
+[33m14f7a5f[m add dot ui 🟣🔵🟦🟪🟩
+[33m9cc2361[m add flex wrap props 🏋💪✋
+[33m9f69d73[m add widgets 🧙‍♂️🎴
+[33m04bb679[m add widget toal visits 🧙‍♂️🎴🏃‍♀️🏃‍♂️📉
+[33m0292a9a[m Add flex 🤸🏋💪
+[33me19806a[m Add font weight to bold and margin 😀😤👆👇
+[33m90e77d6[m add widgets 🪄📉📈🎴🧑‍🌾
+[33ma6aa9c6[m add widget total revenue 🤑💰
+[33m0891cac[m add more colors 🥳🌈🪅🪄
+[33mf5c90a6[m add widget weekly overview 🕵🧐💸💰
+[33m37a957b[m add widget total visitor 🚶‍♀️🚶‍♂️🏃‍♂️🏃‍♀️
+[33m9959b13[m add total profit widget 🎴📈📉
+[33m781e9c2[m add text alignment center 👉🔡👈
+[33md902fb8[m moved card title into title directory 🎴🔤👉🧳
+[33mebf9399[m add marginBottom props 👇🫠
+[33mee283f7[m fix cardTitle import + add custome card title 🕵🎴🧛‍♀️
+[33m9e5420e[m add extra 1 column width 8️⃣💣3️⃣3️⃣3️⃣3️⃣3️⃣
+[33m16fabe7[m add react router 👨‍🚀🕳️💫
+[33m7befbf7[m add font 'inter' ✝️💟🕉️🔡🔤
+[33mfe3f00e[m Add width 🌏👉👈☀️
+[33m1f8576b[m add semicolone 🫥🫥💩
+[33m7d20b45[m add light mode text color slightly less darker 🎨🖌️🖤
+[33m0981376[m add custom card title + moved cardTitle components here 🚀🎴😶
+[33m4047390[m Adjust font size and weight 🖌️🖍️🖊️
+[33m0521224[m fix circle Y-axis position 🔵🟣
+[33m5845dfe[m Add className props 🆔😌
+[33mdb4e878[m remove z-index 🤜😵‍💫
+[33md8199b0[m Add fadeIn animation and remove default list style 🧚🦋🌬️
+[33m00b157d[m add dropdown component 🫳🫗
+[33md668a1d[m Add gimification card 🧝🧙‍♂️🎴
+[33md2a4e69[m fix title size 👿👹 > ☺️☺️
+[33md22c70e[m Add className props 🆔
+[33m1f66210[m Add san serif font 🔡🔠
+[33ma8167b6[m Add default relative position 🚩🥹😉
+[33mf450ab2[m Make optional option props 😶‍🌫️😐🫥
+[33m8bd0b35[m Add class name props 💃🕺
+[33m315e6f8[m Add gimi card 🩻🎴
+[33mf27d7a4[m Add $ sign 💲🤑
+[33md385c95[m Add sales card item 🏷️🎴
+[33m72409d1[m fix comma when user provide divider 0️⃣0️⃣0️⃣❓0️⃣0️⃣🔟
+[33m6067cdb[m Add typography 🌐🔤2️⃣
+[33maeaa037[m Fix text as avatar font size when user provide custome size 🔬🔍
+[33m47b3069[m Add secondary color 😀👉😄 and moved global text style from styled text component to global css file 🌐
+[33m64ac568[m Add analytic card item 📊📉🎴
+[33mf66f51e[m Add capitalize card title ✍️🦿🦾
+[33m844bf24[m Add linear progress bar 🚀💫
+[33m37328cf[m Add icon and avatar 🧙‍♂️🧌👩‍🎤
+[33m6a801be[m Add chip component 🍟🏷️
+[33m2ee1c87[m Add tag as chip 🏷️🪆
+[33me6b2f23[m Add meeting card👨‍💻🧑‍🦱👦🧑‍🦰
+[33m752c769[m Add generic advance card and its card item 🤒💀😵‍💫🎴🍆
+[33m0494f7a[m Fix typo default avatar export name 😁😌😌
+[33mdd0a897[m Fix pass color props 😯🌈
+[33m9343056[m Add apex chart and non-interactiv chart component 📊📉
+[33m8ec9679[m Add transaction card 🛍️💸
+[33m819fbef[m Fix return either  floating number or integer 🔣0️⃣
+[33meeb76eb[m Add global grid item classname and spacing 🆔🌐
+[33m29a4c1d[m Card component with image 🎴🙃🪞🙂
+[33m0673004[m Add option args 🤔🤔
+[33m488faa2[m Add color 🎨🌈
+[33m3e94e8c[m Change title h6 to h5 6️⃣👉5️⃣
+[33m91ea57e[m Add flex alignments options 👉👆👇👈
+[33m7544edd[m Add new card component 🎴🔮🪩
+[33me468ecc[m Add style property 💅🤳💃🕺
+[33m3c3bd0c[m Fix dividing amount 10000 to 1000 💲💹
+[33mcbcc0dd[m Add statistic card which varient is transparent 🪞 [200t 🎴🪞🪩
+[33mde2eaa4[m Add number format 🩸🕳️⛓️🔮
+[33m52d7b13[m Add alert style 🔔🙅
+[33me8c1087[m Add style property 🤨🤨
+[33mb00cf5c[m Add styles 🤨🤨
+[33m0f695d5[m Add className and flex property 🏋️‍♀️💪
+[33mc645036[m Ummm some gibrish
+[33m48fe9ac[m Remove mui unused packages 🎁🗳️♻️🚮
+[33m5bbc750[m Add box for wrapper 🎁🗳️🗃️
+[33mfb597c6[m Add theme customizer 😎🎨🖌️👷‍♀️🍆
+[33mdf4a875[m Add default export for toggle  component 👇👆
+[33mba73e79[m Add default padding 👈👆👇👉
+[33mc4229b5[m Add circle overlay 🔵🟣
+[33md85ec55[m Add overlay circle 🔵🟣
+[33m926ea2d[m Add divider ⚡⚡
+[33m9818361[m Add style 😞😩😒😩😒
+[33mf9e2b0d[m Add default lebel size
+[33m4a6f1ab[m Add multilabel ✌️
+[33m015686b[m Add style 😎🤘
+[33m0c4fab9[m Add theme handler 👷‍♀️🔧🖌️🎨
+[33m2fa1e88[m Add card header title 🍄🍆🥒
+[33m09f5878[m Add Icon button 🔡🔢🆗
+[33m6d38b00[m Add text color 🖌️
+[33m6775eef[m Fix spacing 👷‍♀️🔧
+[33m1a71cd1[m Add grid todo: optimize scss 🧐🧐👷‍♀️👷‍♀️
+[33m894c290[m Grid v2 🧮🤓
+[33m0500854[m Did gibris
+[33m1788dd1[m add default export for uis
+[33m9d10837[m IDK what i did
+[33m07425b1[m add card regular components 🃏🎴
+[33m7c5ff31[m Change theme colors #3 🎨🖌️😒
+[33m28135fb[m Add avatar ui 🦸🧜‍♂️😃🧌🧚‍♂️
+[33m927fb7d[m Change theme colors ♻️🎨🖌️

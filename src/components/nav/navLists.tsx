@@ -38,6 +38,18 @@ const navList: NavOptions[] = [
     ],
   },
   {
+    parent: formatGroupButton("Reportes", <DescriptionOutlined />, "/invoice/"),
+    childrens: [
+      format("Reportes acumulado por día", "/invoice/list/"),
+      format("Registro de venta", "/invoice/preview/"),
+      format("Reporte control efectivo", "/invoice/edit/"),
+      format("Reporte de bancos", "/invoice/add/"),
+      format("Reporte caja chica", "/invoice/add/"),
+      format("Reporte cobranzas", "/invoice/add/"),
+      format("Reporte rentabilidad", "/invoice/add/"),
+    ],
+  },  
+  {
     label: "Email",
     path: "/apps/email/",
     icon: <EmailOutlined />,

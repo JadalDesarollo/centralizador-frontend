@@ -17,6 +17,7 @@ import Form from "../form/Form";
 import AuthFormContainer from "./AuthFormContainer";
 import ConnectionOptions from "./ConnectionOptions";
 import FormHeading from "./FormHeading";
+import { axios } from '../../api/axios';
 
 export interface LoginFormDate {
   email: string;
@@ -36,26 +37,35 @@ const Login: FC<Props> = ({ onSubmit, hyperComponent }) => {
   const emailRef = createRef<HTMLInputElement>();
   const passwordRef = createRef<HTMLInputElement>();
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
+    console.log('sssss');
     if (!emailRef.current?.value || !passwordRef.current?.value) {
       setError("Please enter email & password");
       return;
     }
-    if (
-      emailRef.current.value !== "admin@triolo.com" ||
-      passwordRef.current.value !== "admin123"
-    ) {
-      setError(
-        "Invalid email or password. Please enter valid email & password."
-      );
-      return;
-    }
-    onSubmit({
-      email: emailRef.current.value,
-      password: emailRef.current.value,
-      remember: isRemember,
-    });
-    setError("");
+
+    // Construye el objeto de datos para enviar al servidor
+    const body = {
+      user: emailRef.current.value,
+      password: passwordRef.current.value,
+    };
+  console.log('body',body);
+  
+      // Realiza la solicitud al servidor para iniciar sesión
+      // await csrfToken(); // Asegúrate de cómo obtener el token CSRF si es necesario
+  
+      const resp = await axios.post('login', body);
+      console.log('respuitesa', resp);
+      if (resp.status === 200) {
+        // Llama a la función onSubmit con los datos del usuario
+        onSubmit(resp.data.user);
+  
+        // Redirige al usuario a la página de perfil después de un inicio de sesión exitoso
+       console.log('res',resp);
+      }
+
+
+
   };
 
   useEffect(() => {

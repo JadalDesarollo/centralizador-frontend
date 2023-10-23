@@ -20,6 +20,7 @@ const Invoice = lazy(() => import("./invoice"));
 const Pages = lazy(() => import("./pages/Pages"));
 const Users = lazy(() => import("./users"));
 const CardPages = lazy(() => import("./card-pages/index"));
+const ReportDay = lazy(() => import("./report/ReportDay"));
 const Home = () => {
   return (
     <AppLayout>
@@ -47,6 +48,7 @@ const Home = () => {
               <Route path="/pages/*" element={<Pages />} />
               <Route path="/charts/*" element={<Charts />} />
               <Route path="/ui/cards/*" element={<CardPages />} />
+              <Route path="/report/day/*" element={<ReportDay />} />
               <Route path="/*" element={<PageNotFound />} />
             </Routes>
           </Suspense>

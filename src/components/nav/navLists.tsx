@@ -40,8 +40,8 @@ const navList: NavOptions[] = [
   {
     parent: formatGroupButton("Reportes de Ventas", <DescriptionOutlined />, "/report/"),
     childrens: [
-      format("Reportes acumulado por día", "/report/day/"),
-      format("Registro de venta", "/report/sale/"),
+      format("Reporte acumulado por día", "/report/day/"),
+      format("Reporte de venta", "/report/sale/"),
       format("Reporte control efectivo", "/report/control/"),
       format("Reporte de bancos", "/report/bank/"),
       format("Reporte caja chica", "/report/cash/"),

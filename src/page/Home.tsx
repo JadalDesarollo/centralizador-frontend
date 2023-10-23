@@ -20,7 +20,13 @@ const Invoice = lazy(() => import("./invoice"));
 const Pages = lazy(() => import("./pages/Pages"));
 const Users = lazy(() => import("./users"));
 const CardPages = lazy(() => import("./card-pages/index"));
+const ReportBank = lazy(() => import("./report/ReportBank"));
+const ReportCash = lazy(() => import("./report/ReportCash"));
+const ReportCollection = lazy(() => import("./report/ReportCollection"));
+const ReportControl = lazy(() => import("./report/ReportControl"));
 const ReportDay = lazy(() => import("./report/ReportDay"));
+const ReportProfitability = lazy(() => import("./report/ReportProfitability"));
+const ReportSale = lazy(() => import("./report/ReportSale"));
 const Home = () => {
   return (
     <AppLayout>
@@ -48,7 +54,13 @@ const Home = () => {
               <Route path="/pages/*" element={<Pages />} />
               <Route path="/charts/*" element={<Charts />} />
               <Route path="/ui/cards/*" element={<CardPages />} />
+              <Route path="/report/bank/*" element={<ReportBank />} />
+              <Route path="/report/cash/*" element={<ReportCash />} />
+              <Route path="/report/collection/*" element={<ReportCollection />} />
+              <Route path="/report/control/*" element={<ReportControl />} />
               <Route path="/report/day/*" element={<ReportDay />} />
+              <Route path="/report/profitability/*" element={<ReportProfitability />} />
+              <Route path="/report/sale/*" element={<ReportSale />} />
               <Route path="/*" element={<PageNotFound />} />
             </Routes>
           </Suspense>

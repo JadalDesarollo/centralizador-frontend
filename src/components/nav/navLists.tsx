@@ -38,15 +38,15 @@ const navList: NavOptions[] = [
     ],
   },
   {
-    parent: formatGroupButton("Reportes de Ventas", <DescriptionOutlined />, "/invoice/"),
+    parent: formatGroupButton("Reportes de Ventas", <DescriptionOutlined />, "/report/"),
     childrens: [
-      format("Reportes acumulado por día", "/invoice/list/"),
-      format("Registro de venta", "/invoice/preview/"),
-      format("Reporte control efectivo", "/invoice/edit/"),
-      format("Reporte de bancos", "/invoice/add/"),
-      format("Reporte caja chica", "/invoice/add/"),
-      format("Reporte cobranzas", "/invoice/add/"),
-      format("Reporte rentabilidad", "/invoice/add/"),
+      format("Reportes acumulado por día", "/report/day/"),
+      format("Registro de venta", "/report/sale/"),
+      format("Reporte control efectivo", "/report/control/"),
+      format("Reporte de bancos", "/report/bank/"),
+      format("Reporte caja chica", "/report/cash/"),
+      format("Reporte cobranzas", "/report/collection/"),
+      format("Reporte rentabilidad", "/report/profitability/"),
     ],
   },  
   {

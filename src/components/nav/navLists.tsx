@@ -38,7 +38,7 @@ const navList: NavOptions[] = [
     ],
   },
   {
-    parent: formatGroupButton("Reportes", <DescriptionOutlined />, "/invoice/"),
+    parent: formatGroupButton("Reportes de Ventas", <DescriptionOutlined />, "/invoice/"),
     childrens: [
       format("Reportes acumulado por día", "/invoice/list/"),
       format("Registro de venta", "/invoice/preview/"),

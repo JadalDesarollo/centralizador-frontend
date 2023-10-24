@@ -60,8 +60,10 @@ function ReportSale() {
           />
         </Box>
     <div>
+    <Box display="flex" align="center" mb={16}>
       <Button onClick={downloadAndCachePDF}>Visualizar PDF</Button>
       {/* <button onClick={openPDFViewer}>Visualizar PDF</button> */}
+    </Box>
       <br />
       <div>
         {pdfUrlCached ? (

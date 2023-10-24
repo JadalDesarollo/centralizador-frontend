@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { Avatar, Button, TextField, Select, SelectItem, Text } from "../../ui";
 import Box from "../../components/box/Box";
 import Card from "../../components/card/Card";
@@ -7,7 +6,7 @@ import Form from "../../components/form/Form";
 import { GridInnerContainer, GridItem } from "../../components/layout";
 import DatePicker,{ registerLocale, setDefaultLocale } from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'; // Asegúrate de importar los estilos
-
+import { axios } from '../../api/axios';
 
 import es from 'date-fns/locale/es';
 registerLocale('es', es)
@@ -26,13 +25,10 @@ function ReportSale() {
   };
 
   const downloadAndCachePDF = async () => {
-    const pdfUrl = 'http://127.0.0.1:8000/api/create-pdf-file';
-
     try {
-      const response = await axios.get(pdfUrl, { responseType: 'blob' });
+      const response = await axios.get('create-pdf-file', { responseType: 'blob' });
       const pdfBlob = new Blob([response.data], { type: 'application/pdf' });
       const pdfUrlCached = URL.createObjectURL(pdfBlob);
-
       setPdfUrlCached(pdfUrlCached);
     } catch (error) {
       console.error('Error al descargar el PDF', error);
@@ -77,8 +73,8 @@ function ReportSale() {
           <Box display="flex" align="center" mb={16}>
             <Button onClick={downloadAndCachePDF}>Visualizar PDF</Button>
             <Button
-              onClick={() => window.location.href = 'http://127.0.0.1:8000/api/create-excel-file'}
-              styles={{ marginLeft: '10px' }} // Añade un margen a la izquierda
+              onClick={() => window.location.href = axios.defaults.baseURL + 'create-excel-file'}
+              styles={{ marginLeft: '10px' }}
             >
               Descargar Excel
             </Button>

@@ -62,7 +62,12 @@ function ReportSale() {
     <div>
     <Box display="flex" align="center" mb={16}>
       <Button onClick={downloadAndCachePDF}>Visualizar PDF</Button>
-      {/* <button onClick={openPDFViewer}>Visualizar PDF</button> */}
+      <Button
+        onClick={() => window.location.href = 'http://127.0.0.1:8000/api/create-excel-file'}
+        styles={{ marginLeft: '10px' }} // Añade un margen a la izquierda
+      >
+        Descargar Excel
+      </Button>
     </Box>
       <br />
       <div>

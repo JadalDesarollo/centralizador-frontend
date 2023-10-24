@@ -12,30 +12,34 @@ export default function ReportSale() {
         Imprimir desde las fechas
       </Text>
       <Box display="flex" align="center" mb={16}>
-      <Text heading="h6" styles={{ minWidth: 120 }}>
-        Fecha Inicial: 
-      </Text>
+        <Text heading="h6" styles={{ minWidth: 120 }}>
+          Desde:
+        </Text>
         <TextField
           type="text"
           name="invoice-date_issue"
           sizes="small"
           maxWidth="250px"
+          defaultValue="2023-10-01" // Establece el valor por defecto
         />
       </Box>
       <Box display="flex" align="center" mb={16}>
-      <Text heading="h6" styles={{ minWidth: 120 }}>
-        Fecha Final: 
-      </Text>
+        <Text heading="h6" styles={{ minWidth: 120 }}>
+          Hasta:
+        </Text>
         <TextField
           type="text"
           name="invoice-date_due"
           sizes="small"
           maxWidth="250px"
+          defaultValue="2023-10-31" // Establece el valor por defecto
         />
       </Box>
       <Button>
-        Imprimir PDF
-      </Button>
+      <a href="http://127.0.0.1:8000/api/create-pdf-file" target="_blank" rel="noopener noreferrer">
+        Visualizar PDF
+      </a>
+    </Button>
     </Box>
     </Card>
   )

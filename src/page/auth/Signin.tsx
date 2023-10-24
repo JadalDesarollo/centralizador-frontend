@@ -42,11 +42,14 @@ const Signin = () => {
                 my={21}
               >
                 <Text varient="caption" weight="medium" skinColor paragraph>
+                  Ingrese las credenciales.
+                </Text>
+                {/* <Text varient="caption" weight="medium" skinColor paragraph>
                   Email: <b>admin@triolo.com</b>
                 </Text>
                 <Text varient="caption" weight="medium" skinColor paragraph>
                   Passcode: <b>admin123</b>
-                </Text>
+                </Text> */}
               </ColorBox>
             }
             onSubmit={handleSubmit}

@@ -18,6 +18,7 @@ import AuthFormContainer from "./AuthFormContainer";
 import ConnectionOptions from "./ConnectionOptions";
 import FormHeading from "./FormHeading";
 import { axios } from '../../api/axios';
+import ColorBox from "../../components/box/ColorBox";
 
 export interface LoginFormDate {
   email: string;
@@ -43,29 +44,24 @@ const Login: FC<Props> = ({ onSubmit, hyperComponent }) => {
       setError("Please enter email & password");
       return;
     }
-
-    // Construye el objeto de datos para enviar al servidor
+  
     const body = {
       user: emailRef.current.value,
       password: passwordRef.current.value,
     };
-  console.log('body',body);
   
-      // Realiza la solicitud al servidor para iniciar sesión
-      // await csrfToken(); // Asegúrate de cómo obtener el token CSRF si es necesario
-  
+    try {
       const resp = await axios.post('login', body);
-      console.log('respuitesa', resp);
+      console.log('respuesta', resp);
       if (resp.status === 200) {
-        // Llama a la función onSubmit con los datos del usuario
         onSubmit(resp.data.user);
-  
-        // Redirige al usuario a la página de perfil después de un inicio de sesión exitoso
-       console.log('res',resp);
+        console.log('res', resp);
       }
-
-
-
+    } catch (error) {
+      // Captura cualquier error en la solicitud y muestra un mensaje de error
+      console.error('Error al enviar la solicitud:', error);
+      setError("Error al iniciar sesión. Verifica tus credenciales o intenta de nuevo.");
+    }
   };
 
   useEffect(() => {
@@ -89,12 +85,12 @@ const Login: FC<Props> = ({ onSubmit, hyperComponent }) => {
                 {error}
               </Alert>
             )}
-            <TextField type="text" name="email" label="Email" ref={emailRef} />
+            <TextField type="text" name="email" label="Usuario" ref={emailRef} />
             <Box>
               <TextField
                 type={!isToggle ? "password" : "text"}
                 name="password"
-                label="password"
+                label="contraseña"
                 ref={passwordRef}
                 endAdornment={
                   <IconButton

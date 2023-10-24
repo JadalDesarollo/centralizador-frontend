@@ -5,9 +5,25 @@ import Box from "../../components/box/Box";
 import Card from "../../components/card/Card";
 import Form from "../../components/form/Form";
 import { GridInnerContainer, GridItem } from "../../components/layout";
+import DatePicker,{ registerLocale, setDefaultLocale } from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css'; // Asegúrate de importar los estilos
+
+
+import es from 'date-fns/locale/es';
+registerLocale('es', es)
 
 function ReportSale() {
   const [pdfUrlCached, setPdfUrlCached] = useState(null);
+  const [selectedDateFrom, setSelectedDateFrom] = useState(new Date()); 
+  const [selectedDateTo, setSelectedDateTo] = useState(new Date()); 
+ 
+  const handleDateChange = (date) => {
+    setSelectedDateFrom(date);
+  };
+
+  const handleDateChange2 = (date) => {
+    setSelectedDateTo(date);
+  };
 
   const downloadAndCachePDF = async () => {
     const pdfUrl = 'http://127.0.0.1:8000/api/create-pdf-file';
@@ -39,46 +55,43 @@ function ReportSale() {
           <Text heading="h6" styles={{ minWidth: 120 }}>
             Desde:
           </Text>
-          <TextField
-            type="text"
-            name="invoice-date_issue"
-            sizes="small"
-            maxWidth="250px"
-            defaultValue="2023-10-01" // Establece el valor por defecto
+          <DatePicker
+            selected={selectedDateFrom}
+            onChange={handleDateChange}
+            dateFormat="dd/MM/yyyy"
+            locale="es"
           />
         </Box>
         <Box display="flex" align="center" mb={16}>
           <Text heading="h6" styles={{ minWidth: 120 }}>
             Hasta:
           </Text>
-          <TextField
-            type="text"
-            name="invoice-date_due"
-            sizes="small"
-            maxWidth="250px"
-            defaultValue="2023-10-31" // Establece el valor por defecto
+          <DatePicker
+            selected={selectedDateTo}
+            onChange={handleDateChange2}
+            dateFormat="dd/MM/yyyy"
+            locale="es"
           />
         </Box>
-    <div>
-    <Box display="flex" align="center" mb={16}>
-      <Button onClick={downloadAndCachePDF}>Visualizar PDF</Button>
-      <Button
-        onClick={() => window.location.href = 'http://127.0.0.1:8000/api/create-excel-file'}
-        styles={{ marginLeft: '10px' }} // Añade un margen a la izquierda
-      >
-        Descargar Excel
-      </Button>
-    </Box>
-      <br />
-      <div>
-        {pdfUrlCached ? (
-          <iframe src={pdfUrlCached} width="100%" height="600"></iframe>
-        ) : (
-          <p>Cargando PDF...</p>
-        )}
-      
-    </div>
-    </div>
+        <div>
+          <Box display="flex" align="center" mb={16}>
+            <Button onClick={downloadAndCachePDF}>Visualizar PDF</Button>
+            <Button
+              onClick={() => window.location.href = 'http://127.0.0.1:8000/api/create-excel-file'}
+              styles={{ marginLeft: '10px' }} // Añade un margen a la izquierda
+            >
+              Descargar Excel
+            </Button>
+          </Box>
+          <br />
+          <div>
+            {pdfUrlCached ? (
+              <iframe src={pdfUrlCached} width="100%" height="600"></iframe>
+            ) : (
+              <p>Cargando PDF...</p>
+            )}
+          </div>
+        </div>
       </Box>
     </Card>
   );

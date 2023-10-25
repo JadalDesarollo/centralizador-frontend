@@ -7,6 +7,8 @@ import useAuth from "../../hooks/useAuth";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import useNavigation from "../../hooks/useNavigation";
 import { Text } from "../../ui";
+import loginDark from "../../image/auth/login-dark.png";
+import loginLight from "../../image/auth/login-light.png";
 
 const Signin = () => {
   const { isAuthenticated } = useAuth();
@@ -58,8 +60,8 @@ const Signin = () => {
       }
       LeftContent={
         <AuthBanner
-          bgDark="https://i.ibb.co/n8YcMNb/login-dark.png"
-          bgLight="https://i.ibb.co/n8YcMNb/login-light.png"
+          bgDark={loginDark}
+          bgLight={loginLight}
         />
       }
     />

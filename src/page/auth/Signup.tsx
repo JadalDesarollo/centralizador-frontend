@@ -6,6 +6,8 @@ import AuthLayout from "../../components/layout/auth-form/AuthLayout";
 import useAuth, { IAuth } from "../../hooks/useAuth";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import useNavigation from "../../hooks/useNavigation";
+import signupDark from "../../image/auth/signup-dark.png";
+import signupLight from "../../image/auth/signup-light.png";
 
 const Signup = () => {
   const { isAuthenticated } = useAuth();
@@ -35,8 +37,8 @@ const Signup = () => {
     <AuthLayout
       LeftContent={
         <AuthBanner
-          bgDark="https://i.ibb.co/kqMh25P/signup-dark.png"
-          bgLight="https://i.ibb.co/cT8K3th/signup-light.png"
+          bgDark={signupDark}
+          bgLight={signupLight}
         />
       }
       RightContent={

@@ -90,8 +90,8 @@ const Login: FC<Props> = ({ onSubmit, hyperComponent }) => {
       <Box width="100%" mb={20}>
         <Form onSubmit={handleSubmit} preventDefault>
           <FormHeading
-            title="Welcome to Triolo"
-            subtitle="Please sing-in to your account and start the adventure"
+            title="Bienvenido a Jadal"
+            subtitle="Inicia sesión en tu cuenta y utiliza la plataforma Jadal."
           />
           {hyperComponent}
           <Box display="flex" flexDirection="column" space={1}>
@@ -131,23 +131,23 @@ const Login: FC<Props> = ({ onSubmit, hyperComponent }) => {
               />
               <Box display="flex" align="center" justify="space-between">
                 <Checkbox
-                  label="Remember Me"
+                  label="Recuérdame"
                   checked={isRemember}
                   onChange={() => setIsRemember((prevState) => !prevState)}
                 />
 
                 <Link to="../forget-password/" className="body2">
-                  Forget Password?
+                  ¿Olvidaste la contraseña?
                 </Link>
               </Box>
             </Box>
-            <Button type="submit">login</Button>
+            <Button type="submit">Iniciar sesión</Button>
           </Box>
         </Form>
       </Box>
       <Box mb={20}>
         <Text varient="body2" align="center" secondary paragraph>
-          New on platform? <Link to="/auth/register/">Create an account</Link>
+        ¿Eres nuevo en la plataforma? <Link to="/auth/register/">Crea una cuenta</Link>
         </Text>
       </Box>
       <DividerWithLabel label="Or" />

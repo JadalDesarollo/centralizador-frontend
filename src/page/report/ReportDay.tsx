@@ -8,6 +8,9 @@ import DatePicker, { registerLocale, setDefaultLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; // Asegúrate de importar los estilos
 import { axios } from "../../api/axios";
 
+import es from "date-fns/locale/es";
+registerLocale("es", es);
+
 export default function ReportDay() {
   const [pdfUrlCached, setPdfUrlCached] = useState(null);
   const [selectedDateFrom, setSelectedDateFrom] = useState(new Date());
@@ -43,6 +46,9 @@ export default function ReportDay() {
   return (
     <Card padding="1.4rem">
       <Box px={20}>
+      <Text heading="h3" styles={{ minWidth: 120 }}>
+          Report acumulado por día
+        </Text>
         <Text heading="h5" styles={{ minWidth: 120 }}>
           Imprimir desde las fechas
         </Text>

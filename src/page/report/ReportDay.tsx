@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import { Avatar, Button, TextField, Select, SelectItem, Text } from "../../ui";
 import Box from "../../components/box/Box";
 import Card from "../../components/card/Card";
@@ -15,6 +15,23 @@ export default function ReportDay() {
   const [pdfUrlCached, setPdfUrlCached] = useState(null);
   const [selectedDateFrom, setSelectedDateFrom] = useState(new Date());
   const [selectedDateTo, setSelectedDateTo] = useState(new Date());
+  const [establishments, setEstablishments] = useState([]);
+  const defaultValue = establishments.length > 0 ? establishments[establishments.length - 1].description : '';
+
+
+  useEffect(() => {
+    // Realizar la solicitud GET con Axios
+    axios.get('http://127.0.0.1:8000/api/establishments')
+      .then(response => {
+        // Actualizar el estado con los datos recibidos
+        setEstablishments(response.data);
+        console.log('ssssssssss', response.data);
+      })
+      .catch(error => {
+        console.error('Error al obtener los datos:', error);
+      });
+  }, []);
+
 
   const handleDateChange = (date) => {
     setSelectedDateFrom(date);
@@ -37,12 +54,12 @@ export default function ReportDay() {
     }
   };
 
-  const openPDFViewer = () => {
-    if (pdfUrlCached) {
-      window.open(pdfUrlCached, "_blank");
-    }
-  };
+  const title = 'Selecciona un local'; // Título del select
 
+  const onSelect = (selectedValue) => {
+    // Manejar la selección aquí
+    console.log('Valor seleccionado:', selectedValue);
+  };
   return (
     <Card padding="1.4rem">
       <Box px={20}>
@@ -74,8 +91,14 @@ export default function ReportDay() {
             locale="es"
           />
         </Box>
+    <Select defaultValue={defaultValue} label={title} onChange={onSelect} width="80%">
+      {establishments.map((item) => (
+        <SelectItem key={item.code} value={item.code} label={item.description} />
+      ))}
+    </Select>
+    
         <div>
-          <Box display="flex" align="center" mb={16}>
+          <Box display="flex" align="center" mb={16} mt={16}>
             <Button onClick={downloadAndCachePDF}>Visualizar PDF</Button>
             <Button
               onClick={() =>

@@ -17,7 +17,7 @@ import Form from "../form/Form";
 import AuthFormContainer from "./AuthFormContainer";
 import ConnectionOptions from "./ConnectionOptions";
 import FormHeading from "./FormHeading";
-import { axios } from '../../api/axios';
+import { axios } from "../../api/axios";
 import ColorBox from "../../components/box/ColorBox";
 
 export interface LoginFormDate {
@@ -39,28 +39,43 @@ const Login: FC<Props> = ({ onSubmit, hyperComponent }) => {
   const passwordRef = createRef<HTMLInputElement>();
 
   const handleSubmit = async () => {
-    console.log('sssss');
+    console.log("sssss");
     if (!emailRef.current?.value || !passwordRef.current?.value) {
       setError("Please enter email & password");
       return;
     }
-  
+
     const body = {
       user: emailRef.current.value,
       password: passwordRef.current.value,
     };
-  
+
     try {
-      const resp = await axios.post('login', body);
-      console.log('respuesta', resp);
+      const resp = await axios.post("login", body);
+      console.log("respuesta", resp);
       if (resp.status === 200) {
         onSubmit(resp.data.user);
-        console.log('res', resp);
+        console.log("res", resp);
+
+        if (resp.status === 200) {
+          onSubmit(resp.data.user);
+          console.log("res", resp);
+
+          // Verifica si "result" es un arreglo y contiene al menos un elemento
+          if (resp.status === 200) {
+            const dsusuario = resp.data.result[0].dsusuario.trim(); // Elimina espacios en blanco
+            // Almacena el valor de "dsusuario" en el almacenamiento local
+            localStorage.setItem("dsusuarios", dsusuario);
+            console.log("dsusuario", dsusuario);
+          }
+        }
       }
     } catch (error) {
       // Captura cualquier error en la solicitud y muestra un mensaje de error
-      console.error('Error al enviar la solicitud:', error);
-      setError("Error al iniciar sesión. Verifica tus credenciales o intenta de nuevo.");
+      console.error("Error al enviar la solicitud:", error);
+      setError(
+        "Error al iniciar sesión. Verifica tus credenciales o intenta de nuevo."
+      );
     }
   };
 
@@ -85,7 +100,12 @@ const Login: FC<Props> = ({ onSubmit, hyperComponent }) => {
                 {error}
               </Alert>
             )}
-            <TextField type="text" name="email" label="Usuario" ref={emailRef} />
+            <TextField
+              type="text"
+              name="email"
+              label="Usuario"
+              ref={emailRef}
+            />
             <Box>
               <TextField
                 type={!isToggle ? "password" : "text"}

@@ -15,6 +15,7 @@ import DropdownV2, { DropdownV2Item } from "../../dropdown/DropdownV2";
 import useLogout from "../../../hooks/useLogout";
 
 const ProfileDropdown = () => {
+  const savedUsername = localStorage.getItem('dsusuarios');
   const route = useNavigate();
   const logout = useLogout();
   const pushRoutes = (path: string) => route(path);
@@ -26,7 +27,7 @@ const ProfileDropdown = () => {
           <Avatar src={john} alt="john doe" />
           <Box>
             <Text varient="body1" weight="bold" paragraph>
-              John Doe
+              {savedUsername}
             </Text>
             <Text varient="caption" weight="medium" secondary>
               Admin

@@ -12,9 +12,13 @@ import es from "date-fns/locale/es";
 registerLocale("es", es);
 
 export default function ReportDay() {
+  
+  const defaultEstablishment = '0  '; // Valor predeterminado 'TODOS'
   const [pdfUrlCached, setPdfUrlCached] = useState(null);
   const [selectedDateFrom, setSelectedDateFrom] = useState(new Date());
   const [selectedDateTo, setSelectedDateTo] = useState(new Date());
+  const [selectedEstablishment, setSelectedEstablishment] = useState(defaultEstablishment);
+
   const [establishments, setEstablishments] = useState([]);
   const defaultValue = establishments.length > 0 ? establishments[establishments.length - 1].description : '';
 
@@ -25,7 +29,7 @@ export default function ReportDay() {
       .then(response => {
         // Actualizar el estado con los datos recibidos
         setEstablishments(response.data);
-        console.log('ssssssssss', response.data);
+        console.log('establecimientos', response.data);
       })
       .catch(error => {
         console.error('Error al obtener los datos:', error);
@@ -40,12 +44,33 @@ export default function ReportDay() {
   const handleDateChange2 = (date) => {
     setSelectedDateTo(date);
   };
+  
+  const handleSelectChange = (event) => {
+    setSelectedEstablishment(event.target.value); // Actualiza el estado con el valor seleccionado
+  };
 
   const downloadAndCachePDF = async () => {
     try {
-      const response = await axios.get("create-pdf-file", {
+      // Obtiene los datos de fecha y local del estado
+      const desde = selectedDateFrom.toISOString().slice(0, 10).replace(/-/g, '');
+      const hasta = selectedDateTo.toISOString().slice(0, 10).replace(/-/g, '');
+      const local = selectedEstablishment; 
+      
+      const defaultValue = establishments.length > 0 ? establishments[establishments.length - 1].description : '';
+      // Crea un objeto con los datos a enviar
+      const postData = {
+        desde,
+        hasta,
+        local,
+      };
+      console.log('Datos enviados a través de postData:', postData); // Agrega este console.log para ver los datos
+
+      // Realiza la solicitud POST con Axios
+      const response = await axios.post("http://127.0.0.1:8000/api/report/day", postData, {
         responseType: "blob",
       });
+  
+      // Crea y muestra el PDF
       const pdfBlob = new Blob([response.data], { type: "application/pdf" });
       const pdfUrlCached = URL.createObjectURL(pdfBlob);
       setPdfUrlCached(pdfUrlCached);
@@ -58,6 +83,7 @@ export default function ReportDay() {
 
   const onSelect = (selectedValue) => {
     // Manejar la selección aquí
+    setSelectedEstablishment(selectedValue);
     console.log('Valor seleccionado:', selectedValue);
   };
   return (
@@ -69,6 +95,7 @@ export default function ReportDay() {
         <Text heading="h5" styles={{ minWidth: 120 }}>
           Imprimir desde las fechas
         </Text>
+      <Form>
         <Box display="flex" align="center" mb={16}>
           <Text heading="h6" styles={{ minWidth: 120 }}>
             Desde:
@@ -91,13 +118,12 @@ export default function ReportDay() {
             locale="es"
           />
         </Box>
-    <Select defaultValue={defaultValue} label={title} onChange={onSelect} width="80%">
-      {establishments.map((item) => (
-        <SelectItem key={item.code} value={item.code} label={item.description} />
-      ))}
-    </Select>
-    
-        <div>
+        <Select name="local" defaultValue={defaultValue} label={title} onChange={onSelect} width="80%">
+  {establishments.map((item) => (
+    <SelectItem key={item.code} value={item.code} label={item.description} />
+  ))}
+</Select>
+
           <Box display="flex" align="center" mb={16} mt={16}>
             <Button onClick={downloadAndCachePDF}>Visualizar PDF</Button>
             <Button
@@ -110,6 +136,7 @@ export default function ReportDay() {
               Descargar Excel
             </Button>
           </Box>
+          </Form>
           <br />
           <div>
             {pdfUrlCached ? (
@@ -118,7 +145,7 @@ export default function ReportDay() {
               <p>Cargando PDF...</p>
             )}
           </div>
-        </div>
+       
       </Box>
     </Card>
   );

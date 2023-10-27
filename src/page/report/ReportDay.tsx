@@ -142,7 +142,7 @@ export default function ReportDay() {
             {pdfUrlCached ? (
               <iframe src={pdfUrlCached} width="100%" height="600"></iframe>
             ) : (
-              <p>Cargando PDF...</p>
+              <p>Seleccione ...</p>
             )}
           </div>
        

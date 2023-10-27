@@ -160,7 +160,10 @@ export default function ReportDay() {
             locale="es"
           />
         </Box>
-        <Select name="local" defaultValue={defaultValue} label={title} onChange={onSelect} width="80%">
+        <Text heading="h6" styles={{ minWidth: 120 }}>
+            Local:
+          </Text>
+        <Select name="local" defaultValue={defaultValue} label={title} onChange={onSelect} width="100%">
   {establishments.map((item) => (
     <SelectItem key={item.code} value={item.code} label={item.description} />
   ))}

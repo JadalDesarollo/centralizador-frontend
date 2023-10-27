@@ -9,4 +9,4 @@ const axios = Axios.create({
   },
 });
 
-export { axios }; // Exporta el módulo axios
+export { axios };

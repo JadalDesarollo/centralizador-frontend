@@ -66,7 +66,7 @@ export default function ReportDay() {
       console.log('Datos enviados a través de postData:', postData); // Agrega este console.log para ver los datos
 
       // Realiza la solicitud POST con Axios
-      const response = await axios.post("http://127.0.0.1:8000/api/report/day", postData, {
+      const response = await axios.post("report/day", postData, {
         responseType: "blob",
       });
   

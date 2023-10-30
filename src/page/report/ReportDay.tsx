@@ -94,6 +94,7 @@ export default function ReportDay() {
         desde,
         hasta,
         local,
+        user,
       };
       console.log("Datos enviados a través de postData:", postData);
   

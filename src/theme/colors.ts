@@ -25,6 +25,10 @@ export type pinky = {
     name: 'pinky',
     color: 'rgba(249, 72, 146, 1)'
 }
+export type jadal = {
+    name: 'jadal',
+    color: 'rgba(7, 24, 70, 1)'
+}
 export interface Dark {
     background: '#1B2430';
     foreground: '#252d3a';
@@ -37,7 +41,7 @@ export interface Light {
 }
 
 export type ThemeMode = Dark | Light;
-type ColorPallets = red | green | purple | blue | orange | pinky;
+type ColorPallets = red | green | purple | blue | orange | pinky| jadal;
 export type PrimaryColorName = ColorPallets["name"]
 export type PrimaryColorCode = ColorPallets['color']
 export type PrimaryColor = {
@@ -51,4 +55,5 @@ export const colorPallets: Array<PrimaryColor> = [
     { name: 'purple', color: "rgba(166, 108, 255, 1)" },
     { name: 'orange', color: "rgba(255, 91, 0, 1)" },
     { name: 'pinky', color: "rgba(249, 72, 146, 1)" },
+    { name: 'jadal', color: "rgba(7, 24, 70, 1)" },
 ];

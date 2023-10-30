@@ -132,10 +132,10 @@ export default function ReportDay() {
   return (
     <Card padding="1.4rem">
       <Box px={20}>
-        <Text heading="h3" styles={{ minWidth: 120 }}>
+        <Text heading="h5" styles={{ minWidth: 120 }}>
           Reporte acumulado por día
         </Text>
-        <Text heading="h5" styles={{ minWidth: 120 }}>
+        <Text heading="h6" styles={{ minWidth: 120 }}>
           Imprimir desde las fechas
         </Text>
         <Form>

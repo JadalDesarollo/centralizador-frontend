@@ -76,6 +76,12 @@ export default function ReportDay() {
 
   const downloadExcel = async () => {
     try {
+      // Obtiene la fecha actual
+      const today = new Date();
+      const day = String(today.getDate()).padStart(2, '0');
+      const month = String(today.getMonth() + 1).padStart(2, '0'); // Sumar 1 al mes, ya que en JavaScript los meses empiezan en 0 (enero es 0)
+      const year = today.getFullYear();
+  
       // Obtiene los datos de fecha y local del estado
       const desde = selectedDateFrom
         .toISOString()
@@ -83,26 +89,28 @@ export default function ReportDay() {
         .replace(/-/g, "");
       const hasta = selectedDateTo.toISOString().slice(0, 10).replace(/-/g, "");
       const local = selectedEstablishment;
-    
+  
       const postData = {
         desde,
         hasta,
         local,
       };
       console.log("Datos enviados a través de postData:", postData);
-
+  
       const response = await axios.post("report/excel/day", postData, {
         responseType: "blob", // Configura el tipo de respuesta como blob
       });
-
+  
       const excelBlob = new Blob([response.data], {
         type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
       }); 
       const excelUrlCached = URL.createObjectURL(excelBlob);
-
+  
+      const fileName = `reporte-diario-excel-${day}-${month}-${year}.xlsx`; // Agrega la fecha actual en el formato "dd-mm-yyyy" al nombre del archivo
+  
       const a = document.createElement("a");
       a.href = excelUrlCached;
-      a.download = "reporte-diario.xlsx"; 
+      a.download = fileName;
       a.style.display = "none";
       document.body.appendChild(a);
       a.click();
@@ -111,6 +119,8 @@ export default function ReportDay() {
       console.error("Error al descargar el Excel", error);
     }
   };
+  
+  
 
   const title = "Selecciona un local"; // Título del select
 

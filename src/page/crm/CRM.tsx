@@ -26,88 +26,68 @@ const CRM = () => {
     <Flex direction="column" styles={{ width: "100%" }}>
       <GridContainer rowSpacing={1.5} columnSpacing={1.5} alignItems="stretch">
         <GridContainer spacing={1.5} alignItems="flex-end" noShifting={true}>
-          <GridItem xs={12} sm={6} md={3}>
-            <CardRangerRating />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={3}>
-            <CardRangerSession />
-          </GridItem>
-          <GridItem xs={12} md={6}>
+          <GridItem xs={12} md={12}>
             <CardTransaction
-              title="Transactions"
+              title="Bienvenido"
               subtitle={
                 <Text varient="body2" secondary>
-                  <strong>Total 54.4% growth</strong> this month
+                  <strong>Sistema Jadal</strong> Reportes
                 </Text>
               }
               items={[
                 {
-                  icon: <TrendingUp />,
+                  icon: <Devices />,
                   id: 1,
-                  total: 323232,
-                  title: "sales",
-                  color: "warning",
+                  total: 1,
+                  title: "Reporte Acumulado por Día",
+                  color: "success",
                 },
                 {
-                  icon: <PersonOutline />,
+                  icon: <Devices />,
                   id: 2,
-                  total: 120000,
-                  title: "customers",
+                  total: 1,
+                  title: "Reporte de Ventas",
                   color: "success",
                 },
                 {
                   icon: <Devices />,
                   id: 3,
-                  total: 3232,
-                  title: "Products",
-                  color: "warning",
+                  total: 1,
+                  title: "Reporte Control Efectivo",
+                  color: "success",
                 },
+                {
+                  icon: <Devices />,
+                  id: 3,
+                  total: 1,
+                  title: "Reporte de Bancos",
+                  color: "success",
+                },
+                {
+                  icon: <Devices />,
+                  id: 3,
+                  total: 1,
+                  title: "Reporte Caja Chica",
+                  color: "success",
+                },
+                {
+                  icon: <Devices />,
+                  id: 3,
+                  total: 1,
+                  title: "Reporte Cobranzas",
+                  color: "success",
+                },
+                {
+                  icon: <Devices />,
+                  id: 3,
+                  total: 1,
+                  title: "Reporte Rentabilidad",
+                  color: "success",
+                },                                                                
               ]}
             />
           </GridItem>
         </GridContainer>
-        <GridItem xs={12} sm={6} md={3}>
-          <CardWidgetTotalSale />
-        </GridItem>
-        <GridItem xs={12} sm={6} md={3}>
-          <CardWidgetRevenueReport />
-        </GridItem>
-        <GridItem xs={12} md={6}>
-          <CardWidgetSalesOverview />
-        </GridItem>
-        <GridItem xs={12} md={6}>
-          <TimelineDummy />
-        </GridItem>
-        <GridItem xs={12} sm={8} md={4}>
-          <CardWidgetWeeklySales />
-        </GridItem>
-        <GridItem xs={12} sm={4} md={2}>
-          <GridInnerContainer noShifting>
-            <GridItem xs={12}>
-              <CardStatisticGrowth />
-            </GridItem>
-            <GridItem xs={12}>
-              <CardMint
-                icon={<BusinessCenter />}
-                title="New Project"
-                growth={18}
-                status="desc"
-                total={862}
-                tag="Yearly Project"
-                iconBackground="warning"
-              />
-            </GridItem>
-          </GridInnerContainer>
-        </GridItem>
-        <GridItem xs={12} md={6} lg={4}>
-          <CardPackagePlan />
-        </GridItem>
-        <GridItem xs={12} md={6} lg={4}>
-          <MeetingDummy />
-        </GridItem>
-        <GridItem xs={12} md={6} lg={4}>
-          <CardMeetup />
-        </GridItem>
       </GridContainer>
     </Flex>
   );

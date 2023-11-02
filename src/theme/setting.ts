@@ -8,7 +8,7 @@ const modeName: ThemeModeName = setting?.mode === "light" ? "light" : "dark";
 const themeSettings: SettingType = {
     mode: {
         name: modeName,
-        background: modeName === "light" ? "#f8f5ff" : "#1B2430",
+        background: modeName === "light" ? "#DDEBFD" : "#1B2430",
         foreground: modeName === "light" ? "#fffffd" : '#252d3a',
         textColor: modeName === "light" ? "#3a3541de" : '#d3d3d3'
     } as any,

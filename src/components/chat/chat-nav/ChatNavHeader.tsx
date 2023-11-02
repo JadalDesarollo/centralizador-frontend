@@ -32,7 +32,7 @@ const ChatNavHeader: FC<Props> = ({ handleOnInputChange }) => {
       space={0.8}
       px={18}
     >
-      <Box display="flex" flex={1} space={0.9} className="avatar-input">
+      {/* <Box display="flex" flex={1} space={0.9} className="avatar-input">
         <UserAvatar
           avatarSrc={avatar_src}
           alt={user_name}
@@ -61,12 +61,12 @@ const ChatNavHeader: FC<Props> = ({ handleOnInputChange }) => {
           borderRadius="24px"
           style={{ paddingLeft: 36 }}
         />
-      </Box>
-      <span className="xs-visible md-hidden">
+      </Box> */}
+      {/* <span className="xs-visible md-hidden">
         <IconButton varient="text" contentOpacity={4} onClick={handleModal}>
           <Close />
         </IconButton>
-      </span>
+      </span> */}
     </StyledChatNavHeader>
   );
 };

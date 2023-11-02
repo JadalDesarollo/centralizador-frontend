@@ -26,6 +26,7 @@ const HorizontalNavItem: FC<Props> = ({ label, icon, path }) => {
         </Box>
         <div className="bg-primary overlay"></div>
       </NavLink>
+      <h1>ssssss</h1>
     </StyledNavItem>
   );
 };

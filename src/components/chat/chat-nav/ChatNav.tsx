@@ -27,10 +27,10 @@ const ChatNav = () => {
       <Divider />
       <Box pl={12}>
         <ScrollContainer maxHeight="74vh">
-          <ChatSectionHeading title="Chats" />
+          {/* <ChatSectionHeading title="Chats" />
           <ChatList chatList={chatList} searchKey={searchKey} />
           <ChatSectionHeading title="Contacts" />
-          <ContactList chatContact={contactList} searchKey={searchKey} />
+          <ContactList chatContact={contactList} searchKey={searchKey} /> */}
         </ScrollContainer>
       </Box>
     </Box>

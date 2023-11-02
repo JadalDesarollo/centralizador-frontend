@@ -14,11 +14,14 @@ const GetStarted: FC<Props> = ({ handleOpenModal }) => {
       space={1.6}
       style={{ height: "100%", width: "100%" }}
     >
-      <CustomAvatar size={100} color="info" skin="light">
-        <ChatBubbleOutlineRounded />
-      </CustomAvatar>
       <Text heading="h6" classes="xs-hidden md-visible" skinColor>
-        Start Conversation
+        Reportes
+        <a href="http://200.37.70.234/Reports_SQLEXPRESS2015/Pages/Report.aspx?ItemPath=%2fMASTERPAGE+2020" label="Otros reportes internos" path="/apps/email/">
+          <h4>Reportes Internos</h4>
+        </a>
+        <a href="http://200.37.70.234/Reports_SQLEXPRESS2015/Pages/Report.aspx?ItemPath=%2fConsultaExterna%2flogin" label="Otros reportes internos" path="/apps/email/">
+          <h4>Reportes Clientes Flota</h4>
+        </a>     
       </Text>
       <ColorBox
         px={16}
@@ -29,7 +32,13 @@ const GetStarted: FC<Props> = ({ handleOpenModal }) => {
         color="info"
         onClick={handleOpenModal}
       >
-        <Text heading="h6">Start Conversation</Text>
+        <Text heading="h6">Enlaces</Text>
+        <a href="http://200.37.70.234/Reports_SQLEXPRESS2015/Pages/Report.aspx?ItemPath=%2fMASTERPAGE+2020" label="Otros reportes internos" path="/apps/email/">
+          <h1>Reportes Internos</h1>
+        </a>
+        <a href="http://200.37.70.234/Reports_SQLEXPRESS2015/Pages/Report.aspx?ItemPath=%2fConsultaExterna%2flogin" label="Otros reportes internos" path="/apps/email/">
+          <h1>Reportes Clientes Flota</h1>
+        </a>        
       </ColorBox>
     </Box>
   );

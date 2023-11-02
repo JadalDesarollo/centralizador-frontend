@@ -32,7 +32,7 @@ const navList: NavOptions[] = [
   {
     parent: formatGroupButton("Dashboards", <Home />, "/dashboards/"),
     childrens: [
-      format("CRM", "/dashboards/crm/"),
+      format("Inicio", "/dashboards/crm/"),
       // format("Analytics", "/dashboards/analytics/"),
       // format("Ecommerce", "/dashboards/ecommerce/"),
     ],
@@ -49,13 +49,13 @@ const navList: NavOptions[] = [
       format("Reporte rentabilidad", "/report/profitability/"),
     ],
   },  
+  {
+    label: "Otros Reportes",
+    path: "/apps/chat/",
+    icon: <ChatBubbleOutlineRounded />,
+  },
   // {
-  //   label: "Email",
-  //   path: "/apps/email/",
-  //   icon: <EmailOutlined />,
-  // },
-  // {
-  //   label: "Chat",
+  //   label: "Otros reportes para clientes flota",
   //   path: "/apps/chat/",
   //   icon: <ChatBubbleOutlineRounded />,
   // },

@@ -23,6 +23,13 @@ export default function ReportDay() {
 
   const user = localStorage.getItem('dsusuarios');
 
+  //mostrar y ocultar
+  const [isShown, setIsShown] = useState(true);
+  
+  const handleClick = event => {
+    setIsShown(current => !current);
+  };
+
   useEffect(() => {
     axios
       .get("establishments")
@@ -139,6 +146,8 @@ export default function ReportDay() {
         <Text heading="h6" styles={{ minWidth: 120 }}>
           Imprimir desde las fechas
         </Text>
+
+        {isShown && (
         <Form>
           <Box display="flex" align="center" mb={16}>
             <Text heading="h6" styles={{ minWidth: 120 }}>
@@ -181,13 +190,18 @@ export default function ReportDay() {
             ))}
           </Select>
 
-          <Box display="flex" align="center" mb={16} mt={16}>
+          <Box display="flex" align="center" mb={5} mt={5}>
             <Button onClick={downloadAndCachePDF}>Visualizar PDF</Button>
             <Button onClick={downloadExcel} styles={{ marginLeft: "10px" }}>
               Descargar Excel
             </Button>
           </Box>
         </Form>
+      )}
+
+        <div>
+          <Button onClick={handleClick}>Mostrar/Ocultar</Button>
+        </div>
         <br />
         <div>
           {pdfUrlCached ? (
